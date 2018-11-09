@@ -1,0 +1,26 @@
+server:
+   port: 9920
+spring:
+   profiles:
+      active: dev
+   application:
+      name: test-eureka-service
+eureka:
+   client:
+      service-url:
+         defaultZone: http://localhost:9320/eureka
+
+#监控，false忽略权限检查
+management:
+   security:
+      enabled: false
+      role: ADMIN
+#security:
+#   user:
+#      name: admin
+#      password: admin
+
+
+
+
+
