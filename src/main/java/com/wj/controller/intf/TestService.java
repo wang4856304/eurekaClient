@@ -6,4 +6,7 @@ public interface TestService {
 
     @RequestMapping(value = "/hello/test")
     String test();
+
+    @RequestMapping("/back")
+    String back();
 }
