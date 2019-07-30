@@ -4,7 +4,7 @@ spring:
    profiles:
       active: dev
    application:
-      name: test-eureka-service
+      name: TEST-EUREKA-SERVICE
 eureka:
    client:
       service-url:
