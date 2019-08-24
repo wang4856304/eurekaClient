@@ -6,7 +6,6 @@
 
     <groupId>com.wj</groupId>
     <artifactId>eurekaClient</artifactId>
-    <packaging>pom</packaging>
     <version>1.0</version>
 
     <properties>
@@ -17,6 +16,7 @@
         <fastJson-version>1.2.44</fastJson-version>
         <lombok-version>1.16.8</lombok-version>
         <log-version>1.7.25</log-version>
+        <java.version>1.8</java.version>
     </properties>
 
 
@@ -124,7 +124,7 @@
         </dependencies>
     </dependencyManagement>
 
-    <profiles>
+    <!--<profiles>
         <profile>
             <id>dev</id>
             <activation>
@@ -146,14 +146,14 @@
                 <package.environment>resources-prod</package.environment>
             </properties>
         </profile>
-    </profiles>
+    </profiles>-->
 
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${spring-boot-version}</version>
+                <!--<version>${spring-boot-version}</version>
                 <configuration>
                     <mainClass>${start-class}</mainClass>
                     <layout>ZIP</layout>
@@ -164,9 +164,9 @@
                             <goal>repackage</goal>
                         </goals>
                     </execution>
-                </executions>
+                </executions>-->
             </plugin>
-            <plugin>
+            <!--<plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
                 <version>2.6</version>
@@ -179,14 +179,14 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <!-- 覆盖原有文件 -->
+                            &lt;!&ndash; 覆盖原有文件 &ndash;&gt;
                             <overwrite>true</overwrite>
                             <outputDirectory>${project.build.outputDirectory}</outputDirectory>
-                            <!-- 也可以用下面这样的方式（指定相对url的方式指定outputDirectory） <outputDirectory>target/classes</outputDirectory> -->
-                            <!-- 待处理的资源定义 -->
+                            &lt;!&ndash; 也可以用下面这样的方式（指定相对url的方式指定outputDirectory） <outputDirectory>target/classes</outputDirectory> &ndash;&gt;
+                            &lt;!&ndash; 待处理的资源定义 &ndash;&gt;
                             <resources>
                                 <resource>
-                                    <!-- 指定resources插件处理哪个目录下的资源文件 -->
+                                    &lt;!&ndash; 指定resources插件处理哪个目录下的资源文件 &ndash;&gt;
                                     <directory>src/main/${package.environment}</directory>
                                     <filtering>false</filtering>
                                 </resource>
@@ -197,7 +197,7 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin>-->
         </plugins>
     </build>
 

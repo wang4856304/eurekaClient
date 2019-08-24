@@ -9,6 +9,8 @@ eureka:
    client:
       service-url:
          defaultZone: http://localhost:9320/eureka
+      register-with-eureka: false #是否注册到注册中心
+      fetch-registry: false #本地缓存服务
 
 #监控，false忽略权限检查
 management:
